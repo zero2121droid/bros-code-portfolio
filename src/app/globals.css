@@ -1,26 +1,227 @@
 @import "tailwindcss";
+@import "tw-animate-css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+:root {
+  --radius: 0.625rem;
+  --background: 255 255 255;
+  --foreground: 15 15 15;
+  --card: 255 255 255;
+  --card-foreground: 15 15 15;
+  --popover: 255 255 255;
+  --popover-foreground: 15 15 15;
+  /* Bros Code Cyan/Blue Brand Colors - Matching the logo */
+  --primary: 0 172 238; /* Bright cyan from logo */
+  --primary-foreground: 255 255 255;
+  --secondary: 240 245 249;
+  --secondary-foreground: 15 15 15;
+  --muted: 248 250 252;
+  --muted-foreground: 100 116 139;
+  --accent: 0 186 255; /* Lighter cyan */
+  --accent-foreground: 255 255 255;
+  --destructive: 239 68 68;
+  --destructive-foreground: 255 255 255;
+  --border: 226 232 240;
+  --input: 226 232 240;
+  --ring: 0 172 238;
+  /* Bros Code Gradient Colors - Matching the logo exactly */
+  --bros-cyan-start: 0 206 255;   /* Light cyan from logo */
+  --bros-cyan-mid: 0 172 238;     /* Main cyan from logo */
+  --bros-cyan-end: 0 122 184;     /* Deeper blue from logo */
+  --chart-1: 0 172 238;
+  --chart-2: 16 185 129;
+  --chart-3: 249 115 22;
+  --chart-4: 168 85 247;
+  --chart-5: 236 72 153;
+  --sidebar: 255 255 255;
+  --sidebar-foreground: 15 15 15;
+  --sidebar-primary: 0 172 238;
+  --sidebar-primary-foreground: 255 255 255;
+  --sidebar-accent: 248 250 252;
+  --sidebar-accent-foreground: 15 15 15;
+  --sidebar-border: 226 232 240;
+  --sidebar-ring: 0 172 238;
+}
+
+.dark {
+  --background: 15 15 15; /* Pure black background */
+  --foreground: 255 255 255; /* Pure white text */
+  --card: 24 24 27; /* Very dark gray for cards */
+  --card-foreground: 255 255 255;
+  --popover: 24 24 27;
+  --popover-foreground: 255 255 255;
+  --primary: 0 172 238; /* Keep the cyan bright in dark mode */
+  --primary-foreground: 255 255 255;
+  --secondary: 39 39 42; /* Dark gray */
+  --secondary-foreground: 255 255 255;
+  --muted: 39 39 42;
+  --muted-foreground: 161 161 170;
+  --accent: 0 186 255; /* Bright cyan accent */
+  --accent-foreground: 15 15 15;
+  --destructive: 239 68 68;
+  --destructive-foreground: 255 255 255;
+  --border: 63 63 70;
+  --input: 63 63 70;
+  --ring: 0 172 238;
+  /* Bros Code Gradient Colors - Brighter in dark mode */
+  --bros-cyan-start: 0 206 255;
+  --bros-cyan-mid: 0 172 238;
+  --bros-cyan-end: 0 122 184;
+  --chart-1: 0 172 238;
+  --chart-2: 34 197 94;
+  --chart-3: 251 146 60;
+  --chart-4: 196 181 253;
+  --chart-5: 244 114 182;
+  --sidebar: 24 24 27;
+  --sidebar-foreground: 255 255 255;
+  --sidebar-primary: 0 172 238;
+  --sidebar-primary-foreground: 255 255 255;
+  --sidebar-accent: 39 39 42;
+  --sidebar-accent-foreground: 255 255 255;
+  --sidebar-border: 63 63 70;
+  --sidebar-ring: 0 172 238;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Bros Code Brand Styles - Matching the Logo */
+.bros-gradient {
+  background: linear-gradient(135deg, 
+    rgb(var(--bros-cyan-start)) 0%, 
+    rgb(var(--bros-cyan-mid)) 50%, 
+    rgb(var(--bros-cyan-end)) 100%);
+}
+
+.bros-gradient-text {
+  background: linear-gradient(135deg, 
+    rgb(var(--bros-cyan-start)) 0%, 
+    rgb(var(--bros-cyan-mid)) 50%, 
+    rgb(var(--bros-cyan-end)) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.bros-glow {
+  box-shadow: 0 0 50px rgba(var(--bros-cyan-mid), 0.3);
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes pulse-glow {
+  from { box-shadow: 0 0 20px rgba(var(--bros-cyan-mid), 0.4); }
+  to { box-shadow: 0 0 40px rgba(var(--bros-cyan-mid), 0.8); }
+}
+
+/* Cool Programming Animations */
+.code-rain {
+  position: relative;
+  overflow: hidden;
+}
+
+.code-rain::before {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: linear-gradient(180deg, 
+    transparent 0%, 
+    rgba(var(--bros-cyan-mid), 0.1) 50%, 
+    transparent 100%);
+  animation: code-rain-fall 3s linear infinite;
+}
+
+@keyframes code-rain-fall {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(200%); }
+}
+
+.terminal-cursor {
+  animation: terminal-blink 1s infinite;
+}
+
+@keyframes terminal-blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* Matrix-style background effect */
+.matrix-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.03;
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(var(--bros-cyan-mid), 0.1) 2px, transparent 2px),
+    radial-gradient(circle at 75% 75%, rgba(var(--bros-cyan-mid), 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: matrix-drift 20s linear infinite;
+}
+
+@keyframes matrix-drift {
+  0% { background-position: 0 0, 25px 25px; }
+  100% { background-position: 50px 50px, 75px 75px; }
 }
