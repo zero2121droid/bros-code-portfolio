@@ -59,23 +59,23 @@ export const translations = {
     // About Section
     about: {
       badge: "Naš Tim",
-      title: "Poznaj Bros Code",
-      description: "Mi smo tim od tri stručnjaka posvećena kreiranju digitalnih rešenja koja menjaju način na koji kompanije funkcionišu online.",
+      title: "Upoznaj Bros Code",
+      description: "Mi smo tim od tri stručnjaka i co-osnivača posvećena kreiranju digitalnih rešenja koja menjaju način na koji kompanije funkcionišu online. Svaki član našeg tima je ravnopravni osnivač sa jedinstvenom ekspertizom.",
       founders: {
         miljan: {
           name: "Miljan Milojković",
-          role: "Full-Stack Web & Mobile Developer",
-          bio: "Osnivač i vodeći programer Bros Code-a. Stručnjak za moderne web tehnologije i mobilna rešenja. Specijalizovan za ASP.NET, Laravel, VueJS i NextJS sa jakim veštinama u SQL i PostgreSQL bazama podataka."
+          role: "Co-Founder & Full-Stack Web & Mobile Developer",
+          bio: "Co-osnivač i vodeći programer Bros Code-a. Vizionar koji spaja tehničku izvrsnost sa inovativnim pristupom. Stručnjak za moderne web tehnologije i mobilna rešenja, specijalizovan za ASP.NET, Laravel, VueJS i NextJS sa dubokimi znanjem SQL i PostgreSQL baza podataka."
         },
         vladimir: {
           name: "Vladimir Gašević", 
-          role: "DevOps Stručnjak",
-          bio: "Naš DevOps guru koji osigurava da sve aplikacije rade besprekorno. Stručnjak za cloud infrastrukturu, automatizaciju deployments-a i optimizaciju sistema. Odličan u Docker-u, Kubernetes-u i CI/CD pipeline-ovima."
+          role: "Co-Founder & DevOps Architecture Specialist",
+          bio: "Co-osnivač i arhitekta cloud infrastrukture Bros Code-a. Maestro skalabilnih sistema koji transformiše složene tehnološke izazove u elegantan kod. Guru cloud tehnologija, Docker-a, Kubernetes-a i CI/CD automatizacije. Njegova ekspertiza omogućava da naše aplikacije rade besprekorno i skaliraju se bez ograničenja."
         },
         lazar: {
           name: "Lazar Vujović",
-          role: "Frontend Programer", 
-          bio: "Vrhunski frontend specialist odgovoran za kreiranje neverovatnih korisničkih interfejsa. Majstor modernih JavaScript framework-a, responzivnog dizajna i korisničkog iskustva koje ostavlja bez daha."
+          role: "Co-Founder & Frontend Engineering Lead", 
+          bio: "Co-osnivač i kreativni um Bros Code-a odgovoran za neverovatna korisnička iskustva. Umetnik digitalnih interfejsa koji spaja lepotu sa funkcionalnosti. Majstor React-a, Vue.js-a, modularnog CSS-a i naprednih animacija. Njegova strast za pixel-perfect dizajn i performanse čini da svaki projekat ostavlja nezaboravan utisak."
         }
       },
       values: {
@@ -98,7 +98,7 @@ export const translations = {
       },
       journey: {
         title: "Naše Putovanje",
-        description: "Bros Code je nastao iz strasti trojice programera da stvaraju izuzetna digitalna iskustva. Kombinujemo našu ekspertizu u različitim oblastima da pružimo kompletna rešenja našim klijentima."
+        description: "Bros Code je nastao iz strasti trojice ravnopravnih osnivača da stvaraju izuzetna digitalna iskustva. Kao co-founders, svaki od nas donosi jedinstvenu ekspertizu i viziju, kombinujući našu različitu znanja u celokupna rešenja koja transformišu biznis naših klijenata."
       },
       cta: {
         ready: "Spremni da kreirati nešto neverovatno?",
@@ -362,22 +362,22 @@ export const translations = {
     about: {
       badge: "Our Team",
       title: "Meet Bros Code",
-      description: "We are a team of three specialists dedicated to creating digital solutions that transform how businesses operate online.",
+      description: "We are a team of three specialists and co-founders dedicated to creating digital solutions that transform how businesses operate online. Each team member is an equal founder with unique expertise.",
       founders: {
         miljan: {
           name: "Miljan Milojković",
-          role: "Full-Stack Web & Mobile Developer",
-          bio: "Founder and lead developer of Bros Code. Expert in modern web technologies and mobile solutions. Specialized in ASP.NET, Laravel, VueJS, and NextJS with strong skills in SQL and PostgreSQL databases."
+          role: "Co-Founder & Full-Stack Web & Mobile Developer",
+          bio: "Founder and lead developer of Bros Code. A visionary who combines technical excellence with innovative approach. Expert in modern web technologies and mobile solutions, specialized in ASP.NET, Laravel, VueJS, and NextJS with deep knowledge of SQL and PostgreSQL databases."
         },
         vladimir: {
           name: "Vladimir Gašević",
-          role: "DevOps Specialist",
-          bio: "Our DevOps guru who ensures all applications run flawlessly. Expert in cloud infrastructure, deployment automation, and system optimization. Excellent with Docker, Kubernetes, and CI/CD pipelines."
+          role: "Co-Founder & DevOps Architecture Specialist",
+          bio: "Co-founder and cloud infrastructure architect of Bros Code. A maestro of scalable systems who transforms complex technological challenges into elegant code. Cloud technologies guru, Docker, Kubernetes, and CI/CD automation expert. His expertise enables our applications to run flawlessly and scale without limits."
         },
         lazar: {
           name: "Lazar Vujović",
-          role: "Frontend Developer",
-          bio: "Top-tier frontend specialist responsible for creating amazing user interfaces. Master of modern JavaScript frameworks, responsive design, and user experiences that leave you breathless."
+          role: "Co-Founder & Frontend Engineering Lead",
+          bio: "Co-founder and creative mind of Bros Code responsible for incredible user experiences. Digital interface artist who merges beauty with functionality. Master of React, Vue.js, modular CSS, and advanced animations. His passion for pixel-perfect design and performance makes every project leave an unforgettable impression."
         }
       },
       values: {
@@ -400,7 +400,7 @@ export const translations = {
       },
       journey: {
         title: "Our Journey",
-        description: "Bros Code was born from the passion of three developers to create exceptional digital experiences. We combine our expertise in different areas to provide complete solutions to our clients."
+        description: "Bros Code was born from the passion of three equal co-founders to create exceptional digital experiences. As co-founders, each of us brings unique expertise and vision, combining our diverse knowledge into comprehensive solutions that transform our clients' businesses."
       },
       cta: {
         ready: "Ready to create something amazing?",
