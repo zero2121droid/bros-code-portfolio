@@ -298,7 +298,7 @@ export const translations = {
       copyright: {
         allRights: "Sva prava zadržana.",
         madeWith: "Napravljeno sa",
-        location: "u Beogradu"
+        location: "u Leskovcu"
       },
       backToTop: "Povratak na vrh"
     }
@@ -600,7 +600,7 @@ export const translations = {
       copyright: {
         allRights: "All rights reserved.",
         madeWith: "Made with",
-        location: "in Belgrade"
+        location: "in Leskovac"
       },
       backToTop: "Back to top"
     }

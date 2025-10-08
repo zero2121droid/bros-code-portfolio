@@ -146,7 +146,7 @@ export default function PortfolioSection() {
         </motion.div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-16">
           {projects.map((project, index) => {
             const TypeIcon = getTypeIcon(project.type);
             
@@ -216,7 +216,7 @@ export default function PortfolioSection() {
                     </div>
                   </div>
 
-                  <CardContent className="p-8">
+                  <CardContent className="p-4 sm:p-6 lg:p-8">
                     {/* Category */}
                     <Badge 
                       variant="outline" 

@@ -148,7 +148,7 @@ export default function ServicesSection() {
         </motion.div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {services.map((service, index) => (
             <motion.div
               key={service.titleKey}
@@ -183,7 +183,7 @@ export default function ServicesSection() {
                   }}
                   transition={{ duration: 3, repeat: Infinity }}
                 />
-                <CardContent className="p-8 relative">
+                <CardContent className="p-6 sm:p-8 relative">
                   {/* Programming Animation */}
                   <motion.div
                     className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
@@ -267,7 +267,7 @@ export default function ServicesSection() {
 
         {/* Stats Section */}
         <motion.div
-          className="mt-24 grid grid-cols-2 md:grid-cols-4 gap-8"
+          className="mt-16 sm:mt-24 grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
@@ -298,7 +298,7 @@ export default function ServicesSection() {
               }}
             >
               <motion.div
-                className="text-4xl md:text-5xl font-bold bros-gradient-text mb-2"
+                className="text-3xl sm:text-4xl md:text-5xl font-bold bros-gradient-text mb-2"
                 animate={{ 
                   textShadow: [
                     "0px 0px 0px rgba(0,172,238,0)",
