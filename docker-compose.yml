@@ -20,16 +20,16 @@ services:
       - 'traefik.enable=true'
       - 'traefik.docker.network=web'
 
-      # --- definicija middleware-a (mora ići pre routera) ---
-      - "traefik.http.middlewares.www-to-apex.redirectregex.regex=^https?://www\\.bros-code\\.com/(.*)"
-      - 'traefik.http.middlewares.www-to-apex.redirectregex.replacement=https://bros-code.com/$1'
-
-      # --- router ---
+      # Router za glavni domen (apex + www)
       - 'traefik.http.routers.broscode.rule=Host(`bros-code.com`,`www.bros-code.com`)'
       - 'traefik.http.routers.broscode.entrypoints=websecure'
       - 'traefik.http.routers.broscode.tls=true'
       - 'traefik.http.routers.broscode.tls.certresolver=myresolver'
+
+      # www -> apex redirect (čist URL)
+      - "traefik.http.middlewares.www-to-apex.redirectregex.regex=^https?://www\\.bros-code\\.com/(.*)"
+      - 'traefik.http.middlewares.www-to-apex.redirectregex.replacement=https://bros-code.com/$1'
       - 'traefik.http.routers.broscode.middlewares=www-to-apex'
 
-      # --- service ---
+      # Port na kojem app sluša
       - 'traefik.http.services.broscode.loadbalancer.server.port=3000'
